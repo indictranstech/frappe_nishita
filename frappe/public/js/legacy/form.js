@@ -716,6 +716,7 @@ _f.Frm.prototype._save = function(save_action, callback, btn, on_error, resolve)
 			}
 
 			me.script_manager.trigger("after_save");
+			//alert("Saved")
 			me.refresh();
 		} else {
 			if(on_error) {

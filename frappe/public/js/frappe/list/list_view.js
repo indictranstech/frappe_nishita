@@ -593,7 +593,7 @@ frappe.views.ListView = frappe.ui.BaseList.extend({
 			.addClass('visible-xs');
 
 		if (frappe.model.can_import(this.doctype)) {
-			this.page.add_menu_item(__('Import'), function () {
+			this.page.add_menu_item(__('Import/Export'), function () {
 				frappe.set_route('data-import-tool', {
 					doctype: me.doctype
 				});

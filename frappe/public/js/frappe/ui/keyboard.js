@@ -45,6 +45,29 @@ frappe.ui.keys.on('ctrl+s', function(e) {
 	return false;
 });
 
+frappe.ui.keys.on('ctrl+k', function(e) {
+	
+	if($('.layout-side-section').css('display') == 'none')
+	{
+		$(".layout-side-section").css("display", "block");
+		$(".layout-main-section-wrapper").css("width", "80%");
+		return false;
+	}
+	else if($('.layout-side-section').css('display') == 'block')
+	{
+		$(".layout-side-section").css("display", "none");
+		$(".layout-main-section-wrapper").css("width", "100%");
+		return false;
+	}
+	
+});
+
+frappe.ui.keys.on('ctrl+l', function(e) {
+	var route = frappe.get_route();
+	frappe.set_route("List", route[1]);
+	return false;
+});
+
 frappe.ui.keys.on('ctrl+g', function(e) {
 	$("#navbar-search").focus();
 	e.preventDefault();

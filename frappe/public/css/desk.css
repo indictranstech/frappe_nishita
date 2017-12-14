@@ -854,6 +854,7 @@ li.user-progress .progress-bar {
   outline: none;
   box-shadow: none;
 }
+
 .search-dialog .layout-side-section,
 .search-dialog .layout-main-section {
   height: 500px;
@@ -1166,3 +1167,12 @@ input[type="checkbox"]:checked:before {
 .user-progress-dialog .done-state .help-links a {
   margin: 0px 10px;
 }
+
+.layout-side-section{
+  display: none;
+}
+
+.layout-main-section-wrapper{
+width:100%
+}
+

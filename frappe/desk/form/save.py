@@ -4,6 +4,7 @@
 from __future__ import unicode_literals
 import frappe, json
 from frappe.desk.form.load import run_onload
+from frappe import _
 
 @frappe.whitelist()
 def savedocs(doc, action):
@@ -20,6 +21,7 @@ def savedocs(doc, action):
 		else:
 			try:
 				doc.save()
+				frappe.msgprint(_("{0} is Saved Sucessfully").format(doc.doctype))
 			except frappe.NameError as e:
 				doctype, name, original_exception = e if isinstance(e, tuple) else (doc.doctype or "", doc.name or "", None)
 				frappe.msgprint(frappe._("{0} {1} already exists").format(doctype, name))
